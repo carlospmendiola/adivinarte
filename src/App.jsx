@@ -6,7 +6,9 @@ function App() {
 
   return (
     <>
+    <header></header>
       <h1>Adivinarte</h1>
+    <footer></footer>
     </>
   )
 }
