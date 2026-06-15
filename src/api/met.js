@@ -29,3 +29,18 @@ export const getRandomArtwork = async ()=> {
   }
   
 }
+
+export const generarOpciones = async(obraCorrecta, campo)=> {
+  try {
+    const valorCorrecto = obraCorrecta [campo]
+    const senuelo1 = await getRandomArtwork();
+    const senuelo2 = await getRandomArtwork();
+    const senuelo3 = await getRandomArtwork();
+    const valorSenuelo1 = senuelo1[campo]
+    const valorSenuelo2 = senuelo2[campo]
+    const valorSenuelo3 = senuelo3[campo]
+    return [valorCorrecto, valorSenuelo1, valorSenuelo2, valorSenuelo3].sort(() => Math.random() - 0.5);
+  } catch (error) {
+    console.log(error);
+  }
+}

@@ -5,7 +5,7 @@ import { Inicio } from './components/Inicio'
 import { Juego } from './components/Juego'
 import { Pregunta } from './components/Pregunta'
 import { Resultado } from './components/Resultado'
-import { getRandomArtwork } from './api/met.js'
+import { generarOpciones, getRandomArtwork } from './api/met.js'
 
 
 function App() {
@@ -13,6 +13,8 @@ function App() {
   const [obra,setObra] = useState(null)
   const handleClick = async () => {
     const pintarObra = await getRandomArtwork();
+    const opciones = await generarOpciones (pintarObra, "title");
+    console.log(opciones);
     setObra(pintarObra);
   }
 
@@ -25,7 +27,9 @@ function App() {
       <Juego/>
       <Pregunta/>
       <Resultado/> */}
+      {obra && <img src={obra.primaryImageSmall} alt={obra.title}/>}
       {obra && <p>{obra.title}</p>}
+      {obra && <p>{obra.artistDisplayName}</p>}
       <button onClick={handleClick}>Pintar obra</button>
 
     <footer></footer>
