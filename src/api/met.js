@@ -16,21 +16,26 @@ export const fetchMet = async (accion) => {
 // Obtiene una obra aleatoria de la colección del Met.
 // Hace dos peticiones: una para buscar IDs de obras que cumplan los filtros,
 // y otra para obtener el detalle completo de una obra elegida al azar.
-export const getRandomArtwork = async ()=> {
+export const getRandomArtwork = async () => {
   try {
     const search = await fetchMet("search?q=painting&hasImages=true");
     const { objectIDs } = search;
-    const randomIndex = Math.floor(Math.random()*objectIDs.length);
-    const artworkId = objectIDs[randomIndex];
-    const artworkDetail = await fetchMet(`objects/${artworkId}`);
+    
+    let artworkDetail = null;
+    while (!artworkDetail || !artworkDetail.primaryImageSmall || !artworkDetail.artistDisplayName) {
+      const randomIndex = Math.floor(Math.random() * objectIDs.length);
+      const artworkId = objectIDs[randomIndex];
+      artworkDetail = await fetchMet(`objects/${artworkId}`);
+    }
+    
     return artworkDetail;
   } catch (error) {
     console.log(error);
   }
-  
 }
 
 export const randomField = () => {
+  
   const fields = ["title", "artistDisplayName"]
   const selectField = Math.floor(Math.random()*fields.length);
   return fields [selectField];
