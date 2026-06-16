@@ -2,12 +2,12 @@
 const URL_BASE = 'https://collectionapi.metmuseum.org/public/collection/v1'
 
 
-// Función genérica para pedir datos a la API del Met
-export const peticionMet = async (accion) => {
+// Función genérica para pedir data a la API del Met
+export const fetchMet = async (accion) => {
   try {
-    const peticion = await fetch(`${URL_BASE}/${accion}`);
-    const datos = await peticion.json();
-    return datos;
+    const request = await fetch(`${URL_BASE}/${accion}`);
+    const data = await request.json();
+    return data;
   } catch (error) {
     console.log(error);
   }
@@ -18,34 +18,34 @@ export const peticionMet = async (accion) => {
 // y otra para obtener el detalle completo de una obra elegida al azar.
 export const getRandomArtwork = async ()=> {
   try {
-    const busqueda = await peticionMet("search?q=painting&hasImages=true");
-    const { objectIDs } = busqueda;
-    const indiceAleatorio = Math.floor(Math.random()*objectIDs.length);
-    const idObra = objectIDs[indiceAleatorio];
-    const detalleObra = await peticionMet(`objects/${idObra}`);
-    return detalleObra;
+    const search = await fetchMet("search?q=painting&hasImages=true");
+    const { objectIDs } = search;
+    const randomIndex = Math.floor(Math.random()*objectIDs.length);
+    const artworkId = objectIDs[randomIndex];
+    const artworkDetail = await fetchMet(`objects/${artworkId}`);
+    return artworkDetail;
   } catch (error) {
     console.log(error);
   }
   
 }
 
-export const campoAleatorio = () => {
-  const campos = ["title", "artistDisplayName"]
-  const seleccionCampo = Math.floor(Math.random()*campos.length);
-  return campos [seleccionCampo];
+export const randomField = () => {
+  const fields = ["title", "artistDisplayName"]
+  const selectField = Math.floor(Math.random()*fields.length);
+  return fields [selectField];
 }
 
-export const generarOpciones = async(obraCorrecta, campo)=> {
+export const optionsGenerate = async(correctArtwork, field)=> {
   try {
-    const valorCorrecto = obraCorrecta [campo]
-    const senuelo1 = await getRandomArtwork();
-    const senuelo2 = await getRandomArtwork();
-    const senuelo3 = await getRandomArtwork();
-    const valorSenuelo1 = senuelo1[campo]
-    const valorSenuelo2 = senuelo2[campo]
-    const valorSenuelo3 = senuelo3[campo]
-    return [valorCorrecto, valorSenuelo1, valorSenuelo2, valorSenuelo3].sort(() => Math.random() - 0.5);
+    const correctValue = correctArtwork [field]
+    const decoy1 = await getRandomArtwork();
+    const decoy2 = await getRandomArtwork();
+    const decoy3 = await getRandomArtwork();
+    const decoyValor1 = decoy1[field]
+    const decoyValor2 = decoy2[field]
+    const decoyValor3 = decoy3[field]
+    return [correctValue, decoyValor1, decoyValor2, decoyValor3].sort(() => Math.random() - 0.5);
   } catch (error) {
     console.log(error);
   }

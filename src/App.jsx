@@ -5,17 +5,28 @@ import { Inicio } from './components/Inicio'
 import { Juego } from './components/Juego'
 import { Pregunta } from './components/Pregunta'
 import { Resultado } from './components/Resultado'
-import { campoAleatorio, generarOpciones, getRandomArtwork } from './api/met.js'
+import { randomField, optionsGenerate, getRandomArtwork } from './api/met.js'
 
 
 function App() {
 
-  const [obra,setObra] = useState(null)
+  const [artwork,setArtwork] = useState(null);
+  const [option, setOption] = useState([]);
+  const [correctOption, setCorrectOption] = useState(null);
+  const [saveOption, setSaveOption] = useState(null);
   const handleClick = async () => {
-    const pintarObra = await getRandomArtwork();
-    const opciones = await generarOpciones (pintarObra, campoAleatorio());
-    console.log(opciones);
-    setObra(pintarObra);
+    const paintArtwork = await getRandomArtwork();
+    const randoms = randomField();
+    const options = await optionsGenerate (paintArtwork, randoms);
+    const correctOption = paintArtwork [randoms]
+    // console.log(options);
+    setArtwork(paintArtwork);
+    setOption(options);
+    setCorrectOption(correctOption);
+  }
+
+  const handleChange = (ev) => {
+    setSaveOption(ev.target.value);
   }
 
   return (
@@ -27,9 +38,19 @@ function App() {
       <Juego/>
       <Pregunta/>
       <Resultado/> */}
-      {obra && <img src={obra.primaryImageSmall} alt={obra.title}/>}
-      {obra && <p>{obra.title}</p>}
-      {obra && <p>{obra.artistDisplayName}</p>}
+      <div>
+      {artwork && <img src={artwork.primaryImageSmall} alt={artwork.title}/>}
+      </div>
+      {/* {artwork && <p>{artwork.title}</p>}
+      {artwork && <p>{artwork.artistDisplayName}</p>} */}
+      <div>
+      {option.map((item, index) => (
+        <label key={index}>
+          <input type="radio" name="opciones" value={item} onChange={handleChange} />
+          {item}
+        </label>
+      ))}
+      </div>
       <button onClick={handleClick}>Pintar obra</button>
 
     <footer></footer>
