@@ -1,5 +1,5 @@
 import { useState } from 'react'
-// import './assets/style.scss'
+import './assets/style.scss'
 import { Catalogo } from './components/Catalogo'
 import { Inicio } from './components/Inicio'
 import { Juego } from './components/Juego'
@@ -14,6 +14,9 @@ function App() {
   const [option, setOption] = useState([]);
   const [correctOption, setCorrectOption] = useState(null);
   const [saveOption, setSaveOption] = useState(null);
+  const [reponsePoint, setReponsePoint] = useState(null)
+
+
   const handleClick = async () => {
     const paintArtwork = await getRandomArtwork();
     const randoms = randomField();
@@ -23,10 +26,20 @@ function App() {
     setArtwork(paintArtwork);
     setOption(options);
     setCorrectOption(correctOption);
+    setReponsePoint(null);
+    setSaveOption(null);
   }
 
   const handleChange = (ev) => {
     setSaveOption(ev.target.value);
+  }
+
+  const handleCheck =()=> {
+    if (saveOption === correctOption) {
+      setReponsePoint("¡¡¡Respuesta correcta!!!!!");
+    } else {
+      setReponsePoint("¡¡¡Noooo, error!!!")
+    }
   }
 
   return (
@@ -43,15 +56,27 @@ function App() {
       </div>
       {/* {artwork && <p>{artwork.title}</p>}
       {artwork && <p>{artwork.artistDisplayName}</p>} */}
-      <div>
+      <div className='df'>
       {option.map((item, index) => (
         <label key={index}>
-          <input type="radio" name="opciones" value={item} onChange={handleChange} />
+          <input 
+            type="radio" 
+            name="opciones" 
+            value={item} 
+            onChange={handleChange}
+            checked={saveOption === item}
+          />
           {item}
         </label>
       ))}
       </div>
-      <button onClick={handleClick}>Pintar obra</button>
+      {reponsePoint && <p>{reponsePoint}</p>}
+
+      <div className='df'>
+        
+        <button onClick={handleCheck}>Responder</button>
+        <button onClick={handleClick}>Seguir jugando</button>
+      </div>
 
     <footer></footer>
     </>
