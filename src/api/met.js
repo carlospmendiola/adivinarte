@@ -30,6 +30,12 @@ export const getRandomArtwork = async ()=> {
   
 }
 
+export const campoAleatorio = () => {
+  const campos = ["title", "artistDisplayName"]
+  const seleccionCampo = Math.floor(Math.random()*campos.length);
+  return campos [seleccionCampo];
+}
+
 export const generarOpciones = async(obraCorrecta, campo)=> {
   try {
     const valorCorrecto = obraCorrecta [campo]

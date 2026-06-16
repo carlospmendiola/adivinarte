@@ -5,7 +5,7 @@ import { Inicio } from './components/Inicio'
 import { Juego } from './components/Juego'
 import { Pregunta } from './components/Pregunta'
 import { Resultado } from './components/Resultado'
-import { generarOpciones, getRandomArtwork } from './api/met.js'
+import { campoAleatorio, generarOpciones, getRandomArtwork } from './api/met.js'
 
 
 function App() {
@@ -13,7 +13,7 @@ function App() {
   const [obra,setObra] = useState(null)
   const handleClick = async () => {
     const pintarObra = await getRandomArtwork();
-    const opciones = await generarOpciones (pintarObra, "title");
+    const opciones = await generarOpciones (pintarObra, campoAleatorio());
     console.log(opciones);
     setObra(pintarObra);
   }
