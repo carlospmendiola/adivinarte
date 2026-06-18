@@ -1,11 +1,11 @@
 // URL base de la API del Met
-const URL_BASE = 'https://collectionapi.metmuseum.org/public/collection/v1'
+const urlApi = import.meta.env.VITE_API_URL;
 
 
 // Función genérica para pedir data a la API del Met
 export const fetchMet = async (accion) => {
   try {
-    const request = await fetch(`${URL_BASE}/${accion}`);
+    const request = await fetch(`${urlApi}/${accion}`);
     const data = await request.json();
     return data;
   } catch (error) {
@@ -33,7 +33,7 @@ export const getRandomArtwork = async () => {
     console.log(error);
   }
 }
-
+/* Elegimos al azar si la pregunta será sobre el título o el artista. randoms valdrá "title" o "artistDisplayName" (elegido al azar). No necesita await porque randomField() no hace peticiones a la API. */
 export const randomField = () => {
   
   const fields = ["title", "artistDisplayName"]

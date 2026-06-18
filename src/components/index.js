@@ -1,0 +1,6 @@
+export * from './NavBar'
+export * from './Catalogo'
+export * from './Juego'
+export * from './Pregunta'
+export * from './Resultado' 
+export * from './PresentacionJuego'
