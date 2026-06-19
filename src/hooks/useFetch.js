@@ -22,6 +22,7 @@ export const useFetch = () => {
       setData(null)
       setError(result)
       setIsLoading(false)
+
     }
     } catch (error) {
       setData(null)

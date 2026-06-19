@@ -3,15 +3,15 @@ const urlApi = import.meta.env.VITE_API_URL;
 
 
 // Función genérica para pedir data a la API del Met
-export const fetchMet = async (accion) => {
-  try {
-    const request = await fetch(`${urlApi}/${accion}`);
-    const data = await request.json();
-    return data;
-  } catch (error) {
-    console.log(error);
-  }
-}
+// export const fetchMet = async (accion) => {
+//   try {
+//     const request = await fetch(`${urlApi}/${accion}`);
+//     const data = await request.json();
+//     return data;
+//   } catch (error) {
+//     console.log(error);
+//   }
+// }
 
 // Obtiene una obra aleatoria de la colección del Met.
 // Hace dos peticiones: una para buscar IDs de obras que cumplan los filtros,
@@ -54,4 +54,15 @@ export const optionsGenerate = async(correctArtwork, field)=> {
   } catch (error) {
     console.log(error);
   }
+}
+
+export const getCatalogueArtworks = async( limit=48 )=> {
+  // 1. Búsqueda para obtener objectIDs
+  try {
+    const search48 = await fetchMet("search?q=painting&hasImages=true");
+    const objectIDs = search48;
+  } catch (error) {
+    
+  }
+
 }

@@ -1,6 +1,6 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react';
 
-import { Juego, PresentacionJuego } from '../components'
+import { Juego, PresentacionJuego, Botones } from '../components';
 import { useFetch } from '../hooks/useFetch';
 
 

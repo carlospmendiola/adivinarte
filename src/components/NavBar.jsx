@@ -22,7 +22,7 @@ export const NavBar = () => {
         </li>
         <li>
           <NavLink
-              to='/juego'
+              to='/Juego'
               className={({ isActive }) => isActive ? 'nombreClase' : ''}>
               Juego
           </NavLink>

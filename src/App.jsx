@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import './styles/style.scss'
 import './App.css'
-import { NavBar } from './components'
+import { NavBar, Botones } from './components'
 import { Route, Routes } from 'react-router'
 import { CataloguePage, GamePage, HomePage } from './pages'
 
@@ -18,7 +18,7 @@ function App() {
         <Routes>
           <Route path='/' element={<HomePage/>} />
           <Route path='/catalogo' element={<CataloguePage/>}/>
-          <Route path='/juego' element={<GamePage/>} />
+          <Route path='/Juego' element={<GamePage/>} />
         </Routes>      
       </main>
 

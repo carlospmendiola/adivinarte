@@ -71,10 +71,10 @@ export const Juego = () => {
     setGameOver(false)
   }
 
-  // useEffect(()=>{
-  //   getRandomArtwork()
+  useEffect(()=>{
+    getRandomArtwork()
 
-  // },[])
+  },[])
 
   return (
     <>
