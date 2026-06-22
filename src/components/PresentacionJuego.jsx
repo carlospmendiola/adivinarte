@@ -1,7 +1,5 @@
 import React from 'react'
 
-import { Botones } from './Botones.jsx';
-
 export const PresentacionJuego = ({setJugando}) => {
 
   const handleClick =()=>{

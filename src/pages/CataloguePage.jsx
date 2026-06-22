@@ -8,7 +8,7 @@ export const CataloguePage = () => {
 
   const { data, error, isLoading, consulta } = useFetch()
     useEffect(() => {
-      consulta(`${urlApi}/?type=Painting&limit=100&has_image=1`)
+      consulta(`${urlApi}/?type=Painting&limit=12&has_image=1`)
     }, [])
 
 
@@ -25,9 +25,7 @@ export const CataloguePage = () => {
       <section className='catalogo-grid centradoMargin m30-0px'>
       {
         data.data.map((cuadro)=> (
-          <article className='cardContainer masonry card' key={cuadro.id}>
             <Card cuadro={cuadro}/>
-          </article>
         ))
       }
       </section>

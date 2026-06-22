@@ -12,7 +12,7 @@ export const GamePage = ({estado=false}) => {
   const [arrCuadro, setArrCuadro] = useState(null)
   const { data, error, isLoading, consulta } = useFetch()
   useEffect(() => {
-    consulta(`${urlApi}/?type=Painting&limit=100&has_image=1`)
+    consulta(`${urlApi}/?type=Painting&limit=200&has_image=1`)
   }, [])
   useEffect(() => {
     setArrCuadro(data.data)

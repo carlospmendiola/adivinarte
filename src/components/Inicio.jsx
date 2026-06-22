@@ -39,18 +39,7 @@ export const Inicio = () => {
         <button onClick={()=>{handleClick('juego')}} className='boton mayus padBoton borderRad10'>Comienza el juego!!</button>
         <button onClick={()=>{handleClick('catalogo')}} className='boton mayus padBoton borderRad10'>Visita el catálogo</button>
       </div>
-      {/* <section>
-        <p><NavLink
-                to='/juego'
-                className={({ isActive }) => isActive ? 'nombreClase' : ''}>
-                Comienza el juego
-            </NavLink></p>
-        <p><NavLink
-                to='/catalogo'
-                className={({ isActive }) => isActive ? 'nombreClase' : ''}>
-                Catalogo cuadros
-            </NavLink></p>
-      </section> */}
+
     </section>
     </>
   )

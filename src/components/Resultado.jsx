@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const Resultado = () => {
+export const Resultado = ({score,handleReset}) => {
   return (
     <>
       <div>
