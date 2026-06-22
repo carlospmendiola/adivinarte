@@ -24,6 +24,14 @@ export const getFieldValue = (artwork, field)=> {
   return artWorkValue 
 } 
 
+export const phraseOption = (field)=> {
+  let optionResponse
+  if (field == "title") {
+  optionResponse = "Adivina el título..."
+  } else optionResponse = "¿Sabes quién es el autor...?"
+  return optionResponse 
+}
+
 export const optionsGenerate = (correctArtwork, arrCuadro, field)=> {
   const correctValue = getFieldValue (correctArtwork, field);
   const decoy1 = getRandomArtwork(arrCuadro);

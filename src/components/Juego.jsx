@@ -1,4 +1,4 @@
-import { randomField, optionsGenerate, getRandomArtwork, getFieldValue } from '../api/cleveland.js'
+import { randomField, optionsGenerate, getRandomArtwork, getFieldValue, phraseOption } from '../api/cleveland.js'
 
 import { useEffect, useState } from "react";
 import { Resultado } from './Resultado.jsx';
@@ -9,6 +9,7 @@ export const Juego = ({arrCuadro}) => {
   const [artwork,setArtwork] = useState(null);
   const [option, setOption] = useState([]);
   const [correctOption, setCorrectOption] = useState(null);
+  const [titleOrArtist, setTitleOrArtist] = useState(null);
   const [saveOption, setSaveOption] = useState(null);
   const [responsePoint, setResponsePoint] = useState(null);
   const [score, setScore] = useState(0);
@@ -41,6 +42,7 @@ export const Juego = ({arrCuadro}) => {
 
     setArtwork(paintArtwork);
     setOption(options);
+    setTitleOrArtist(randoms);
     setCorrectOption(correctOption);
     setScreenNumber(screenNumber+1);
     setResponsePoint(null);
@@ -75,12 +77,22 @@ export const Juego = ({arrCuadro}) => {
     handleClick()
 
   },[])
+  const getOptionClass = (item, correctOption, saveOption, responsePoint)=> {
+    if (responsePoint === null) {
+      return ''
+      } else if (item === correctOption) {
+      return 'correcta'}
+        else if (item === saveOption) {
+        return 'incorrecta'
+        } else {
+        return ''
+      }
+  }
 
   return (
     <>
       {gameOver ? (
         <Resultado score={score} handleReset={handleReset}/>
-        
       ) : (
         <div>
           <div className='containerImage'>
@@ -88,9 +100,10 @@ export const Juego = ({arrCuadro}) => {
           </div>
 
           <div className='flexContainer columnFC'>
+          <p>{phraseOption(titleOrArtist)}</p>
           {option.map((item, index) => (
-            <label key={index}>
-              <input 
+            <label key={index} className={getOptionClass(item, correctOption, saveOption, responsePoint)}>
+              <input
                 type="radio" 
                 name="opciones" 
                 value={item} 
@@ -116,7 +129,7 @@ export const Juego = ({arrCuadro}) => {
               } className='boton mayus padBoton borderRad10'>
                 {
                 responsePoint === null ? 
-                ("Responder"):
+                (<span className='colorOk'>Responder</span>):
                 ("Seguir jugando")
                 }
                 </button>}
