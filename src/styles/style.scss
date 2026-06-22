@@ -5,6 +5,7 @@
 // @use 'resultado';
 @use 'variables';
 @use 'reset';
+@use 'estructura';
 
 
 .color-principal { 
@@ -25,13 +26,16 @@ h2, h3, h4, h5, h6,p, label {
 }
 .flexContainer {
   display: flex;
-  gap: 10px;
 }
 .centerFC {
   justify-content: center;
 }
 
-.column {
+.flexWrP {
+  flex-wrap: wrap;
+}
+
+.columnFC {
   flex-flow: column;
 }
 
@@ -45,6 +49,12 @@ h2, h3, h4, h5, h6,p, label {
 .padBoton {
   padding: 10px 25px!important;
 }
+.pad15{
+  padding: 15px!important;
+}
+.m30-0px {
+  margin: 30px 0!important;
+}
 .borderRad10 {
   border-radius: 10px;
 }
@@ -53,6 +63,12 @@ h2, h3, h4, h5, h6,p, label {
   width: 80%;
   margin: 0 auto;
 }
-.containerImage img {
+div > img {
   width: 100%;
+}
+.w85 {
+  width: 85%;
+}
+.centradoMargin {
+  margin: 0 auto;
 }

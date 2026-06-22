@@ -1,0 +1,5 @@
+@use './variables';
+
+.borderSencillo {
+  border: 1px solid variables.$primary-color;
+}

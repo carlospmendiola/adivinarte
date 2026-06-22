@@ -1,0 +1,29 @@
+@use '../styles/variables';
+
+
+// .cardContainer {
+//   background-color: variables.$black-color-5;
+// }
+
+.catalogo-grid {
+  column-count: 1;
+}
+
+.card {
+  break-inside: avoid;
+  /* evita que una card se parta entre columnas */
+  margin-bottom: 10px;
+  /* border, sombra, radios... */
+}
+
+.card img {
+  width: 100%;
+  display: block;
+}
+.card h3 {
+  font-size: 1rem;
+}
+.card p {
+  font-size: 1rem;
+}
+

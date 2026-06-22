@@ -9,11 +9,14 @@ export const GamePage = ({estado=false}) => {
   const urlApi = import.meta.env.VITE_API_URL;
   
   const [jugando, setJugando] = useState(estado);
-  const [arrIds, setArrIds] = useState(null)
+  const [arrCuadro, setArrCuadro] = useState(null)
   const { data, error, isLoading, consulta } = useFetch()
   useEffect(() => {
-    consulta(`${urlApi}/search?q=painting&hasImages=true`)
+    consulta(`${urlApi}/?type=Painting&limit=100&has_image=1`)
   }, [])
+  useEffect(() => {
+    setArrCuadro(data.data)
+  }, [data])
   
 
   return (
@@ -24,18 +27,13 @@ export const GamePage = ({estado=false}) => {
     </header>
 
     {
+      isLoading ? ("Cargando..."):(
       !jugando ? (
         <PresentacionJuego setJugando={setJugando}/>
       ) : (
-        <Juego/>
-      )
+        <Juego arrCuadro={ arrCuadro }/>
+      ))
     }
-    
-
-   
-
-
-
     </>
   )
 }

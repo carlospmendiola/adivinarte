@@ -1,8 +1,14 @@
 import React from 'react'
+import { useFetch } from '../hooks/useFetch'
 
 
 export const Catalogo = () => {
+
   return (
-    <div>Catalogo</div>
+    <>
+    <section>
+      
+    </section>
+    </>
   )
 }

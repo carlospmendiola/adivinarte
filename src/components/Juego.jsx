@@ -1,10 +1,9 @@
-
-import { randomField, optionsGenerate, getRandomArtwork } from '../api/met.js'
+import { randomField, optionsGenerate, getRandomArtwork, getFieldValue } from '../api/cleveland.js'
 
 import { useEffect, useState } from "react";
 
 
-export const Juego = () => {
+export const Juego = ({arrCuadro}) => {
   const [artwork,setArtwork] = useState(null);
   const [option, setOption] = useState([]);
   const [correctOption, setCorrectOption] = useState(null);
@@ -27,17 +26,17 @@ export const Juego = () => {
 //   }
 //  ) 
 
-  const handleClick = async () => {
+  const handleClick = () => {
     if (screenNumber >= 10) {
       setGameOver(true);
       return
     } 
     
-    const paintArtwork = await getRandomArtwork();
+    const paintArtwork = getRandomArtwork(arrCuadro);
     const randoms = randomField();
-    const options = await optionsGenerate (paintArtwork, randoms);
-    const correctOption = paintArtwork [randoms]
-    
+    const options = optionsGenerate (paintArtwork, arrCuadro, randoms);
+    const correctOption = getFieldValue(paintArtwork,randoms)
+
     setArtwork(paintArtwork);
     setOption(options);
     setCorrectOption(correctOption);
@@ -72,7 +71,7 @@ export const Juego = () => {
   }
 
   useEffect(()=>{
-    getRandomArtwork()
+    handleClick()
 
   },[])
 
@@ -81,7 +80,7 @@ export const Juego = () => {
 
       <div>
           <div className='containerImage'>
-            {artwork && <img src={artwork.primaryImageSmall} alt={artwork.title}/>}
+            {artwork && <img src={artwork.images.web.url} alt={artwork.title}/>}
           </div>
 
           <div className='flexContainer column'>

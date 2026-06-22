@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import { useFetch } from '../hooks/useFetch'
-import { Catalogo } from '../components'
+import { Card } from '../components/Card';
 
 export const CataloguePage = () => {
 
@@ -8,14 +8,31 @@ export const CataloguePage = () => {
 
   const { data, error, isLoading, consulta } = useFetch()
     useEffect(() => {
-      consulta(`${urlApi}/?type=Painting&limit=1`)
+      consulta(`${urlApi}/?type=Painting&limit=100&has_image=1`)
     }, [])
 
 
   return (
     <>
-    <Catalogo/>
-    <p>{JSON.stringify(data)}</p>
+    <header>
+      <h1>Juega con AdivinARTE</h1>
+      <h2>Galería del catálogo de obras</h2>
+    </header>
+    
+      {
+        isLoading ? <p>cargando</p>
+        :
+      <section className='catalogo-grid centradoMargin m30-0px'>
+      {
+        data.data.map((cuadro)=> (
+          <article className='cardContainer masonry card' key={cuadro.id}>
+            <Card cuadro={cuadro}/>
+          </article>
+        ))
+      }
+      </section>
+      }
+    
     </>
   )
 }
