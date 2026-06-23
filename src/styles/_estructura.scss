@@ -17,9 +17,16 @@ header {
   }
 }
 .zona-botones {
-  padding: variables.$sp-md variables.$sp-lg variables.$sp-xs;
+  padding: variables.$sp-lg variables.$sp-lg variables.$sp-xs;
   gap: variables.$sp-md;
   @include mixins.flex-Container;
   @include mixins.centerFC;
   @include mixins.columnFC
+}
+
+footer {
+  background-color: variables.$primary-color-shadow;
+  padding: variables.$sp-md 0 variables.$sp-xs 0;
+  @include mixins.txt-center;
+  margin-top: variables.$sp-xxl;
 }

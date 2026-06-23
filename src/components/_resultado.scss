@@ -1,3 +1,30 @@
+@use '../styles/variables';
+@use '../styles/mixins';
+@use '../styles/style.scss';
+
 /* ==============
   ESTILOS COMPONENTE RESULTADO
 ================*/
+
+.txt-Finjuego {
+  margin-top: -150px!important;
+  position: relative;
+  padding:variables.$sp-lg variables.$sp-xl;
+  background-color: variables.$primary-color-shadow;
+  
+  z-index: 1;
+  @include mixins.txt-center;
+  h3 {
+    font-size: variables.$txt-resultado;
+    color: variables.$white;
+    font-weight: variables.$fontweigth-semibold;
+    margin-bottom: variables.$sp-xs;
+  }
+  p {
+    font-size: variables.$txt-subtitle;
+    color: variables.$white;
+    span.destacado {
+      font-weight: variables.$fontweigth-bold;
+    }
+  }
+}

@@ -15,9 +15,9 @@ export const PresentacionJuego = ({setJugando}) => {
       </article>
       <div><img src="https://openaccess-cdn.clevelandart.org/1960.117/1960.117_web.jpg" alt="Christ and the Virgin in the House at Nazareth" /></div>
 
-      <div className='zona-botones'>
+      <section className='zona-botones'>
         <button onClick={handleClick} className='boton-juego'>¿Preparad@? ¡Comenzamos!</button>
-      </div>
+      </section>
     </section>
   )
 }

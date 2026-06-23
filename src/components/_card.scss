@@ -1,29 +1,38 @@
 @use '../styles/variables';
+@use '../styles/mixins';
+@use '../styles/style.scss';
 
-
-// .cardContainer {
-//   background-color: variables.$black-color-5;
-// }
 
 .catalogo-grid {
   column-count: 1;
 }
 
+
 .card {
   break-inside: avoid;
   /* evita que una card se parta entre columnas */
-  margin-bottom: 10px;
+  margin-bottom: variables.$sp-sm;
   /* border, sombra, radios... */
+  img 
+    {
+      width: 100%;
+      display: block;
+    }
+  .txt-card {
+    padding: variables.$sp-md variables.$sp-xl;
+  }
+  h3 
+    {
+    font: variables.$fontweigth-bold variables.$txt-normal variables.$secondary-font;
+    @include mixins.mayus;
+    color: variables.$secondary-color;
+    line-height: variables.$lh-normal;
+  }
+  p
+    {
+    font: variables.$fontweigth-regular variables.$txt-title-card variables.$secondary-font;
+    @include mixins.italica
+  }
 }
 
-.card img {
-  width: 100%;
-  display: block;
-}
-.card h3 {
-  font-size: 1rem;
-}
-.card p {
-  font-size: 1rem;
-}
 

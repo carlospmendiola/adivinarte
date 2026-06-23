@@ -5,9 +5,11 @@ $text-font: 'DM Sans','Helvetica Neue',sans-serif;
 
 // ─── Texts sizes ─────────────────────────────────
 $txt-title: 3.5rem;
+$txt-resultado: 2.4rem;
 $txt-subtitle: 1.6rem;
 $txt-title-sections: 1.4rem;
-$txt-normal: .9rem;
+$txt-title-card: 1.2rem;
+$txt-normal: .95rem;
 $txt-menu: .8rem;
 $txt-xs: .7rem;
 $fontweigth-bold: 800;
@@ -22,10 +24,11 @@ $lh-titulo: 1;
 
 $primary-color: #7cb518;
 $primary-color-dark: #6aaa14;
-$primary-color-shadow: rgba(124, 181, 24, 0.28);
+$primary-color-shadow: rgba(124, 181, 24, 0.60);
 $secondary-color: #0077b6;
 $secondary-color-shadow: rgba(0, 119, 182, 0.28);
 $error-color: #8e0002;
+$error-color-shadow: rgba(142, 0, 2, 0.40);
 $sep-color: #cecece;
 $text-color: #131313;
 $white: #ffffff;
@@ -44,6 +47,7 @@ $sp-sm: 8px;
 $sp-md: 16px;
 $sp-lg: 24px;
 $sp-xl: 32px;
+$sp-xxl: 64px;
 
 // ─── Bordes ───────────────────────────────────────
 $radius-sm: 6px;

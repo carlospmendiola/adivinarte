@@ -22,7 +22,9 @@ function App() {
         </Routes>      
       </main>
 
-    <footer></footer>
+    <footer>
+      <p>©Adivinarte 2026.</p>
+    </footer>
     </>
   )
 }

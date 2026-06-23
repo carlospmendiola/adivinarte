@@ -25,3 +25,12 @@
 @mixin columnFC {
   flex-flow: column;
 }
+@mixin txt-center {
+  text-align: center;
+}
+@mixin mayus {
+  text-transform: uppercase;
+}
+@mixin italica {
+  font-style: italic;
+}

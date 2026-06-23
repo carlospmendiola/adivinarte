@@ -27,8 +27,8 @@ export const getFieldValue = (artwork, field)=> {
 export const phraseOption = (field)=> {
   let optionResponse
   if (field == "title") {
-  optionResponse = "Adivina el título..."
-  } else optionResponse = "¿Sabes quién es el autor...?"
+  optionResponse = "¿Conoces el título?"
+  } else optionResponse = "¿Sabes quién es el autor?"
   return optionResponse 
 }
 

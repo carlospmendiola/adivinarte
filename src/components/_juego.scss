@@ -1,10 +1,65 @@
 @use '../styles/variables';
+@use '../styles/mixins';
+@use '../styles/style.scss';
 
 /* ==============
   ESTILOS COMPONENTE JUEGO
 ================*/
+.container-pregunta {
+  margin: variables.$sp-xs 0;
+  button {
+    background-color: variables.$white;
+  }
+}
+.zonaPreguntas {
+  @include mixins.flex-Container;
+  @include mixins.columnFC;
+  padding: variables.$sp-xs variables.$sp-lg variables.$sp-xs;
+  h3 {
+    color: variables.$secondary-color;
+    margin: variables.$sp-sm 0 variables.$sp-md;
+    font-size: variables.$txt-title-card;
+  }
+  label {
+    color: variables.$black-color-85;
+    font: variables.$fontweigth-light variables.$txt-normal variables.$text-font;
+    border-bottom: 1px solid variables.$black-color-10;
+    margin-bottom: variables.$sp-sm;
+    padding: variables.$sp-sm;
+    &:last-child {
+      border-bottom: none
+    }
+  }
+  .correcta {
+      color: variables.$text-color;
+      background-color: variables.$primary-color-shadow;
+      font-weight: variables.$fontweigth-semibold;
+      border: 1px solid variables.$primary-color;
+      border-radius: variables.$radius-sm;
+  }
+  .incorrecta {
+      color: variables.$text-color;
+      background-color: variables.$error-color-shadow;
+      font-weight: variables.$fontweigth-regular;
+      border: 1px solid variables.$error-color;
+      border-radius: variables.$radius-sm;
+  }  
+}
 
-
+.zonaPuntuacion {
+  @include mixins.flex-Container;
+  padding: variables.$sp-sm variables.$sp-xl 0;
+  background-color: variables.$black-color-5;
+  justify-content: space-between;
+  margin: variables.$sp-xs 0 variables.$sp-sm;
+  p span.puntos {
+    font-weight: variables.$fontweigth-bold;
+    color: variables.$secondary-color;
+  }
+  p.conteo {
+    font-weight: variables.$fontweigth-bold;
+  }
+}
 
 .correcta {
   color: variables.$primary-color-shadow;

@@ -15,7 +15,7 @@ nav {
     li { padding:0 variables.$sp-sm;
         font-family: variables.$text-font;
         font-size: variables.$txt-menu;
-        
+        @include mixins.mayus;
       a {
         text-decoration: none;
         color: variables.$white;

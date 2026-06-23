@@ -56,10 +56,10 @@ export const Juego = ({arrCuadro}) => {
 
   const handleCheck =()=> {
     if (saveOption === correctOption) {
-      setResponsePoint("¡¡¡Respuesta correcta!!!!!");
+      setResponsePoint();
       setScore(score+1);
     } else {
-      setResponsePoint("¡¡¡Noooo, error!!!")
+      setResponsePoint()
     }
   }
   const handleReset =()=>{
@@ -107,13 +107,13 @@ export const Juego = ({arrCuadro}) => {
       {gameOver ? (
         <Resultado score={score} handleReset={handleReset}/>
       ) : (
-        <div>
+        <section className='container-pregunta'>
           <div className='containerImage'>
             {artwork && <img src={artwork.images.web.url} alt={artwork.title}/>}
           </div>
 
-          <div className='flexContainer columnFC'>
-          <p>{phraseOption(titleOrArtist)}</p>
+          <section className='zonaPreguntas'>
+          <h3>{phraseOption(titleOrArtist)}</h3>
           {option.map((item, index) => (
             <label key={index} className={getOptionClass(item, correctOption, saveOption, responsePoint)}>
               <input
@@ -124,30 +124,30 @@ export const Juego = ({arrCuadro}) => {
                 checked={saveOption === item}
                 disabled={responsePoint !== null}
               />
-              {item}
+              &nbsp;&nbsp;{item}
             </label>
             ))}
-          </div>
+          </section>
           {responsePoint && <h3>{responsePoint}</h3>}
-          <div className='flexContainer'>
-            {<h4>Puntuación: <span className='mayus fw600 color-principal'>{score} puntos</span></h4>}
-            {<p>{screenNumber}/10</p>}
-          </div>
+          <section className='zonaPuntuacion'>
+            {<p>Puntuación: <span className='puntos'>{score} puntos</span></p>}
+            {<p className='conteo'><span className='puntos'>{screenNumber}</span>/10</p>}
+          </section>
 
-          <div className='flexContainer centerFC'>
+          <section className='zona-botones'>
 
             {artwork && <button onClick={responsePoint === null ? 
               (handleCheck):
               (handleClick)
-              } className='boton mayus padBoton borderRad10'>
+              }>
                 {
                 responsePoint === null ? 
-                (<span className='colorOk'>Responder</span>):
-                ("Seguir jugando")
+                (<span className='boton-juego'>Responder</span>):
+                (<span className='boton-catalogo'>Seguir jugando</span>)
                 }
                 </button>}
-          </div>
-      </div>
+          </section>
+      </section>
       )}
         
       
