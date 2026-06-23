@@ -1,17 +1,16 @@
+@use '../styles/variables';
+
 /* ==============
   ESTILOS COMPONENTE JUEGO
 ================*/
 
-.containerImage {
-  width: 100%;
-  margin: 0 auto;
-}
+
 
 .correcta {
-  color: green;
+  color: variables.$primary-color-shadow;
   font-weight: bold;
 }
 
 .incorrecta {
-  color: red;
+  color: variables.$error-color;
 }

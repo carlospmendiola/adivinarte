@@ -14,10 +14,12 @@ export const CataloguePage = () => {
 
   return (
     <>
-    <header>
-      <h1>Juega con AdivinARTE</h1>
-      <h2>Galería del catálogo de obras</h2>
-    </header>
+      <header>
+        <h1>Juega con<br />
+        <span className='destacado'>Adivin<span className='arte'>arte</span></span></h1>
+        <hr className='separacion' />
+        <h2>Galería del catálogo</h2>
+      </header>
     
       {
         isLoading ? <p>cargando</p>

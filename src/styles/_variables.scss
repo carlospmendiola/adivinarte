@@ -1,5 +1,31 @@
-$primary-color: #006e89;
-$primary-color-bg: #d0107d;
+// ─── Fuentes ─────────────────────────────────────
+$primary-font: 'Cormorant',Georgia,serif;
+$secondary-font: 'Cormorant Garamond',Georgia,serif;
+$text-font: 'DM Sans','Helvetica Neue',sans-serif;
+
+// ─── Texts sizes ─────────────────────────────────
+$txt-title: 3.5rem;
+$txt-subtitle: 1.6rem;
+$txt-title-sections: 1.4rem;
+$txt-normal: .9rem;
+$txt-menu: .8rem;
+$txt-xs: .7rem;
+$fontweigth-bold: 800;
+$fontweigth-semibold: 600;
+$fontweigth-regular: 500;
+$fontweigth-light: 400;
+$lh-normal: 1.4;
+$lh-titulo: 1;
+
+// ─── Colores ─────────────────────────────────────
+
+
+$primary-color: #7cb518;
+$primary-color-dark: #6aaa14;
+$primary-color-shadow: rgba(124, 181, 24, 0.28);
+$secondary-color: #0077b6;
+$secondary-color-shadow: rgba(0, 119, 182, 0.28);
+$error-color: #8e0002;
 $sep-color: #cecece;
 $text-color: #131313;
 $white: #ffffff;
@@ -12,5 +38,20 @@ $black-color-25: #bfbfbf;
 $black-color-10: #e5e5e5;
 $black-color-5: #f2f2f2;
 
-$primary-font: 'Playfair Display', serif;
-$secondary-font: 'Inter', sans-serif;
+// ─── Espaciado ────────────────────────────────────
+$sp-xs: 4px;
+$sp-sm: 8px;
+$sp-md: 16px;
+$sp-lg: 24px;
+$sp-xl: 32px;
+
+// ─── Bordes ───────────────────────────────────────
+$radius-sm: 6px;
+$radius-md: 8px;
+$radius-lg: 12px;
+$radius-xl: 16px;
+$radius-full: 9999px;
+
+// ─── Transiciones ─────────────────────────────────
+$transition: all 0.2s ease;
+

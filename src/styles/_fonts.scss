@@ -1,0 +1,44 @@
+@use './variables';
+
+
+h1 {
+  font: variables.$fontweigth-light variables.$txt-normal variables.$text-font;
+  line-height: variables.$lh-titulo;
+  color: variables.$black-color-40;
+  span.destacado {
+    font-size: variables.$txt-title;
+    font-family: variables.$primary-font;
+    color: variables.$secondary-color;
+    font-style: italic;
+  }
+  span.arte {
+    text-transform: uppercase;
+    color: variables.$white;
+    background-color: variables.$primary-color;
+    padding:0 variables.$sp-xs;
+    font-style: normal;
+  }
+}
+
+h2,
+h3,
+h4,
+h5,
+h6,
+label {
+  font-family: variables.$secondary-font;
+}
+
+p {
+  font-family: variables.$text-font;
+  font-size: variables.$txt-normal;
+  color: variables.$black-color-85;
+  line-height: variables.$lh-normal;
+  margin-bottom: variables.$sp-sm;
+  
+}
+.txt-intro {
+  padding: 0 variables.$sp-lg;
+  font-weight: variables.$fontweigth-light;
+  margin-bottom: variables.$sp-md;
+}

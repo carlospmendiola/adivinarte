@@ -73,10 +73,23 @@ export const Juego = ({arrCuadro}) => {
     setGameOver(false)
   }
 
-  useEffect(()=>{
+  /*
+  Este useEffect carga una obra nueva cada vez que gameOver pasa a false.
+  Se ejecuta:
+  1. Al montar el componente la primera vez (gameOver empieza en false)
+  2. Cada vez que gameOver cambia de true a false (al pulsar "Jugar de nuevo")
+  No llamamos a handleClick() directamente dentro de handleReset porque en ese
+  momento screenNumber todavía tendría el valor antiguo (10), por el retraso
+  con el que React aplica los cambios de estado. Al usar este useEffect,
+  handleClick() se ejecuta ya en el siguiente render, con screenNumber
+  actualizado a 0.
+*/
+  useEffect(() => {
+  if (!gameOver) {
     handleClick()
+  }
+}, [gameOver])
 
-  },[])
   const getOptionClass = (item, correctOption, saveOption, responsePoint)=> {
     if (responsePoint === null) {
       return ''

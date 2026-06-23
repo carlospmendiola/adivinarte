@@ -5,7 +5,7 @@ import './_navbar.scss'
 export const NavBar = () => {
   return (
     <nav>
-      <ul className='flexContainer centerFC'>
+      <ul className='flexContainer centerFC mayus'>
         <li>
           <NavLink
               to='/'

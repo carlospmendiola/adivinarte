@@ -1,0 +1,27 @@
+@mixin color-principal {
+  color: variables.$primary-color;
+}
+
+@mixin color-secundario {
+  color: variables.$secondary-color;
+}
+
+@mixin flex-Container {
+  display: flex;
+}
+
+@mixin centerFC {
+  justify-content: center;
+}
+
+@mixin flexWrP {
+  flex-wrap: wrap;
+}
+@mixin containerImage {
+  width: 100%;
+  margin: 0 auto;
+}
+
+@mixin columnFC {
+  flex-flow: column;
+}

@@ -6,6 +6,16 @@ export const useFetch = () => {
   const [error, setError] = useState(null)
   const [isLoading, setIsLoading] = useState(true)
 
+        // let newhhh=[]
+
+        // result.data.forEach(element => {
+        //   const newObject={
+        //     title:element.title,
+        //     img:element.image.web.url,
+        //     artist:element.creators[0].description
+        //   }
+        //   newhhh.push(newObject)
+        // });
   const consulta= async (url, opciones)=>{
 
     let result;

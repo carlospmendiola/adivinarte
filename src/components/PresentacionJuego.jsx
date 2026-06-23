@@ -9,11 +9,14 @@ export const PresentacionJuego = ({setJugando}) => {
   
   return (
     <section>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus, iure iusto qui porro sed illo, voluptate, nisi aliquid corporis modi dolorem sequi impedit consequatur excepturi non? Consequatur nulla explicabo praesentium.</p>
-      <img/>
+      <article className='txt-intro'>
+        <p>Pon a prueba tu conocimiento del arte universal con este <strong>quiz de 10 preguntas</strong> sobre las grandes obras de la historia de la pintura.</p>
+        <p>Identificarás artistas y nombres de las obras. Al final descubrirás tu <strong>nivel de conocimiento artístico</strong>.</p>
+      </article>
+      <div><img src="https://openaccess-cdn.clevelandart.org/1960.117/1960.117_web.jpg" alt="Christ and the Virgin in the House at Nazareth" /></div>
 
-      <div  className='flexContainer centerFC'>
-        <button onClick={handleClick} className='boton mayus padBoton borderRad10'>EMPEZAR A JUGAR</button>
+      <div className='zona-botones'>
+        <button onClick={handleClick} className='boton-juego'>¿Preparad@? ¡Comenzamos!</button>
       </div>
     </section>
   )

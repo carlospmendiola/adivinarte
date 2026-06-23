@@ -6,58 +6,30 @@
 @use 'variables';
 @use 'reset';
 @use 'estructura';
+@use 'fonts';
+@use 'elements';
+@use 'mixins';
 
 
-.color-principal { 
-  color: variables.$primary-color;
-}
 
-h1 {
-  font-family: variables.$primary-font;
-  color: variables.$primary-color;
-}
-h2, h3, h4, h5, h6,p, label {
-  font-family: variables.$secondary-font;
-}
+
+
 
 .boton {
   border: 1px solid variables.$black-color-25;
   font-family: variables.$secondary-font;
 }
-.flexContainer {
-  display: flex;
-}
-.centerFC {
-  justify-content: center;
-}
 
-.flexWrP {
-  flex-wrap: wrap;
-}
 
-.columnFC {
-  flex-flow: column;
-}
+
 
 .mayus {
   text-transform: uppercase;
 }
 
-.fw600 {
-  font-weight: 600;
-}
-.padBoton {
-  padding: 10px 25px!important;
-}
-.pad15{
-  padding: 15px!important;
-}
-.m30-0px {
-  margin: 30px 0!important;
-}
-.borderRad10 {
-  border-radius: 10px;
-}
+
+
+
 
 
 div > img {

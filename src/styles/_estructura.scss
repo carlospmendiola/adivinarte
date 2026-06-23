@@ -1,5 +1,25 @@
 @use './variables';
+@use './mixins';
 
 .borderSencillo {
   border: 1px solid variables.$primary-color;
+}
+
+header {
+  padding: variables.$sp-md variables.$sp-lg variables.$sp-xs;
+  h2 {
+    font-size: variables.$txt-subtitle;
+    font-weight: variables.$fontweigth-regular;
+    font-family: variables.$secondary-font;
+    color: variables.$black-color-55;
+    line-height: variables.$lh-normal;
+    font-style: italic;
+  }
+}
+.zona-botones {
+  padding: variables.$sp-md variables.$sp-lg variables.$sp-xs;
+  gap: variables.$sp-md;
+  @include mixins.flex-Container;
+  @include mixins.centerFC;
+  @include mixins.columnFC
 }

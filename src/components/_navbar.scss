@@ -1,6 +1,52 @@
+@use '../styles/variables';
+@use '../styles/mixins';
+@use '../styles/style.scss';
+
 /* ==============
   ESTILOS COMPONENTE NAVBAR
 ================*/
 nav {
-  background-color: #0f0;
+  background-color: variables.$primary-color;
+  padding: variables.$sp-sm 0;
+  border-bottom: 1px solid variables.$black-color-25;
+  
+  ul{ @include mixins.flex-Container;
+      @include mixins.centerFC;
+    li { padding:0 variables.$sp-sm;
+        font-family: variables.$text-font;
+        font-size: variables.$txt-menu;
+        
+      a {
+        text-decoration: none;
+        color: variables.$white;
+      }
+      a:hover {
+        color: variables.$black-color-90;
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+.nav {
+  background-color: blue;
+
+  ul {
+    color: black;
+
+    li {
+      color: pink;
+
+      a {
+        color: blue;
+      }
+    }
+  }
 }

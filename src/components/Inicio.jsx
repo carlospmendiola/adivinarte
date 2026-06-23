@@ -3,27 +3,7 @@ import { NavLink, useNavigate, useNavigationType } from 'react-router';
 
 export const Inicio = () => {
   let navigate = useNavigate()
-  const handleClick = async (direccion) => {
-    navigate (`/${direccion}`)
-    
-      // if (screenNumber >= 10) {
-      //   setGameOver(true);
-      //   return
-      // } 
-      
-      // const paintArtwork = await getRandomArtwork();
-      // const randoms = randomField();
-      // const options = await optionsGenerate (paintArtwork, randoms);
-      // const correctOption = paintArtwork [randoms]
-      
-      // setArtwork(paintArtwork);
-      // setOption(options);
-      // setCorrectOption(correctOption);
-      // setScreenNumber(screenNumber+1);
-      // setResponsePoint(null);
-      // setSaveOption(null);
-      // setGameOver(false);
-    }
+  
 
   return (
     <>
