@@ -35,4 +35,38 @@
   }
 }
 
+/*====================================
+    Responsive768
+==============================================*/
+ @media screen and (min-width:768px) {
+
+.catalogo-grid {
+    column-count: 2;
+  }
+}
+
+/*cierra 768*/
+
+/* ===========================================
+    Responsive 990
+============================================== */
+@media screen and (min-width:990px) {
+.catalogo-grid {
+    column-count: 3;
+  }
+
+}
+
+/*cierra 990*/
+
+
+/* ===========================================
+    Responsive 1200
+============================================== */
+@media screen and (min-width:1200px) {
+.catalogo-grid {
+    column-count: 4;
+  }
+}
+
 

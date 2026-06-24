@@ -8,6 +8,8 @@ export const CataloguePage = ({arrCuadro}) => {
 
   const paginaInicio = (paginaActual -1) *12;
   const cuadrosPagina = arrCuadro.slice(paginaInicio, paginaInicio + 12)
+  const totalPaginas = Math.ceil(arrCuadro.length / 12)
+  const paginasArray = Array.from({ length: totalPaginas }, (_, i) => i + 1);
   
   return (
     <>
@@ -16,15 +18,18 @@ export const CataloguePage = ({arrCuadro}) => {
         <span className='destacado'>Adivin<span className='arte'>arte</span></span></h1>
         <hr className='separacion' />
         <h2>Galería del catálogo</h2>
+        <p className='txt-intro-catalogo'>Visita nuestra <strong>galería de obras</strong>. Un catálogo de las mejoras obras seleccionadas.</p>
       </header>
-      
       {
+        
         !arrCuadro ? <p>cargando...</p>
         :
-      <section className='catalogo-grid centradoMargin m30-0px'>
+      
+      <section className='catalogo-grid container-catalogo'>
+        
       {
         cuadrosPagina.map((cuadro)=> (
-            <Card cuadro={cuadro}/>
+            <Card cuadro={cuadro} key={cuadro.id}/>
         ))
       }
       </section>
@@ -34,6 +39,7 @@ export const CataloguePage = ({arrCuadro}) => {
         setPaginaActual(paginaActual - 1)
           } disabled={paginaActual === 1}> Anterior 
         </button>
+        
         <button className='boton-paginacion' onClick={() => 
           setPaginaActual(paginaActual + 1)
           } disabled ={paginaActual === Math.ceil(arrCuadro.length/12)}

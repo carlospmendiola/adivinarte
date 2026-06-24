@@ -1,11 +1,8 @@
 @use './variables';
 @use './mixins';
 
-.borderSencillo {
-  border: 1px solid variables.$primary-color;
-}
-
-header {
+header,
+.intro-juego {
   padding: variables.$sp-md variables.$sp-lg variables.$sp-xs;
   h2 {
     font-size: variables.$txt-subtitle;
@@ -15,6 +12,9 @@ header {
     line-height: variables.$lh-normal;
     font-style: italic;
   }
+}
+.intro-juego {
+  padding: 0 variables.$sp-lg variables.$sp-xs;
 }
 .zona-botones {
   padding: variables.$sp-lg variables.$sp-lg variables.$sp-xs;
@@ -36,4 +36,59 @@ footer {
   padding: variables.$sp-md 0 variables.$sp-xs 0;
   @include mixins.txt-center;
   margin-top: variables.$sp-xxl;
+}
+
+
+/*====================================
+    Responsive768
+============================================== */
+@media screen and (min-width:768px) {
+  .container-Principal,
+  .container-pregunta {
+    width: variables.$ws-xl;
+    @include mixins.center-M0auto;
+  }
+  .container-catalogo{
+    width: variables.$ws-xxxl;
+    @include mixins.center-M0auto;
+  }
+  header {
+    width: variables.$ws-lg;
+    padding: variables.$sp-lg variables.$sp-xl variables.$sp-xs;
+    @include mixins.center-M0auto;
+  }
+  .intro-juego {
+    padding: 0;
+    width: 80%;
+    @include mixins.center-M0auto;
+  }
+  .zona-botones {
+    @include mixins.rowFC;
+  }
+
+}
+/*cierra 768*/
+
+/* ===========================================
+    Responsive 990
+============================================== */
+@media screen and (min-width:990px) {
+  header {
+      width: variables.$ws-md;
+      padding: variables.$sp-xl variables.$sp-xxl variables.$sp-xs;
+    }
+  .container-Principal,
+  .container-pregunta {
+    width: variables.$ws-lg;
+  }
+
+}
+/*cierra 990*/
+
+/* ===========================================
+Responsive 1200
+============================================== */
+@media screen and (min-width:1200px) {
+
+
 }

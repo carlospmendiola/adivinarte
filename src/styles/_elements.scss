@@ -17,7 +17,11 @@
     background-color: variables.$secondary-color-shadow;
     color: variables.$secondary-color;
   }
-  
+}
+button:disabled .boton-juego {
+  background-color: variables.$black-color-5;
+  color: variables.$black-color-25;
+  cursor: not-allowed;
 }
 .boton-catalogo {
   background-color: variables.$primary-color-shadow;
@@ -43,3 +47,25 @@
     cursor: not-allowed;
   }
 }
+
+/*====================================
+Responsive768
+============================================== */
+@media screen and (min-width:768px) {
+  img {
+      border-radius: variables.$radius-sm;
+  }
+}
+
+/*cierra 768 */
+/* ===========================================
+Responsive 990
+============================================== */
+@media screen and (min-width:990px) {}
+
+/*cierra 990 */
+/* ===========================================
+Responsive 1200
+============================================== */
+@media screen and (min-width:1200px) {}
+

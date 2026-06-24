@@ -25,9 +25,17 @@
 @mixin columnFC {
   flex-flow: column;
 }
+@mixin rowFC {
+  flex-flow: row;
+}
+
 @mixin txt-center {
   text-align: center;
 }
+@mixin center-M0auto{
+  margin: 0 auto;
+}
+
 @mixin mayus {
   text-transform: uppercase;
 }

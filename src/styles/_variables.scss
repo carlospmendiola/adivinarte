@@ -19,14 +19,22 @@ $fontweigth-light: 400;
 $lh-normal: 1.4;
 $lh-titulo: 1;
 
+// ─── Width sizes ─────────────────────────────────
+$ws-xs: 15%;
+$ws-sm: 30%;
+$ws-md: 45%;
+$ws-lg: 60%;
+$ws-xl: 75%;
+$ws-xxl: 90%;
+$ws-xxxl: 95%;
+
 // ─── Colores ─────────────────────────────────────
-
-
 $primary-color: #7cb518;
 $primary-color-dark: #6aaa14;
-$primary-color-shadow: rgba(124, 181, 24, 0.60);
+$primary-color-shadow: rgba(124, 181, 24, 0.30);
+$primary-color-darkshadow: rgba(124, 181, 24, 0.70);
 $secondary-color: #0077b6;
-$secondary-color-shadow: rgba(0, 119, 182, 0.28);
+$secondary-color-shadow: rgba(0, 119, 182, 0.30);
 $error-color: #8e0002;
 $error-color-shadow: rgba(142, 0, 2, 0.40);
 $sep-color: #cecece;
@@ -58,4 +66,6 @@ $radius-full: 9999px;
 
 // ─── Transiciones ─────────────────────────────────
 $transition: all 0.2s ease;
+
+
 

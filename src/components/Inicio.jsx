@@ -15,10 +15,10 @@ export const Inicio = () => {
         <img src="https://images.metmuseum.org/CRDImages/ep/original/DT11876.jpg" alt="adsasda"/>
       </div>
 
-      <div className='flexContainer'>
+      {/* <div className='flexContainer'>
         <button onClick={()=>{handleClick('juego')}} className='boton mayus padBoton borderRad10'>Comienza el juego!!</button>
         <button onClick={()=>{handleClick('catalogo')}} className='boton mayus padBoton borderRad10'>Visita el catálogo</button>
-      </div>
+      </div> */}
 
     </section>
     </>

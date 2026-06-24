@@ -14,8 +14,8 @@ function App() {
   const { data, consulta } = useFetch()
 
   useEffect(() => {
-  consulta(`${urlApi}/?type=Painting&limit=200&has_image=1`)
-}, [])
+    consulta(`${urlApi}/?type=Painting&limit=200&has_image=1`)
+  }, [])
   return (
     <>
       <NavBar/>

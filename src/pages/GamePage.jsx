@@ -4,6 +4,15 @@ import { Juego, PresentacionJuego, Botones } from '../components';
 export const GamePage =  ({arrCuadro}) => {
 
   const [jugando, setJugando] = useState(false);
+  const presentacionYJuego =()=> {
+    if (!arrCuadro) {
+      return <p>cargando...</p>
+    } else if (!jugando) {
+      return <PresentacionJuego setJugando={setJugando}/>
+    } else {
+      return <Juego arrCuadro={ arrCuadro }/>
+    }
+  }
 
   return (
     <>
@@ -15,21 +24,9 @@ export const GamePage =  ({arrCuadro}) => {
         <hr className='separacion' />
         <h2>¿Cuánto sabes de pintura?</h2>
       </header>
-
-    {
-      !arrCuadro ? <p>cargando...</p> 
-        :
-          (
-            !jugando ? 
-              (
-                <PresentacionJuego setJugando={setJugando}/>
-              ) 
-              : 
-              (
-                <Juego arrCuadro={ arrCuadro }/>
-            )
-          )
-    }
+      {
+        presentacionYJuego()
+      }
     </>
   )
 }

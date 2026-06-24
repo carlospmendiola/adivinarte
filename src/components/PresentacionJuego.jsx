@@ -8,10 +8,9 @@ export const PresentacionJuego = ({setJugando}) => {
   
   
   return (
-    <section>
-      <article className='txt-intro'>
-        <p>Pon a prueba tu conocimiento del arte universal con este <strong>quiz de 10 preguntas</strong> sobre las grandes obras de la historia de la pintura.</p>
-        <p>Identificarás artistas y nombres de las obras. Al final descubrirás tu <strong>nivel de conocimiento artístico</strong>.</p>
+    <section className='container-Principal'>
+      <article className='intro-juego'>
+        <p className='txt-intro'>Pon a prueba tu conocimiento del arte universal con este <strong>quiz de 10 preguntas</strong> sobre grandes obras de la historia de la pintura. Identifica artistas y nombres de las obras. Descubre tu <strong>nivel de conocimiento artístico</strong>.</p>
       </article>
       <div><img src="https://openaccess-cdn.clevelandart.org/1960.117/1960.117_web.jpg" alt="Christ and the Virgin in the House at Nazareth" /></div>
 

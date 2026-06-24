@@ -4,7 +4,7 @@ import './_resultado.scss';
 export const Resultado = ({score,handleReset}) => {
   return (
     <>
-      <section>
+      <section className='container-Principal'>
         <div><img src="https://openaccess-cdn.clevelandart.org/1927.1984/1927.1984_web.jpg" alt="Dos remeros"/></div>
         <section className='txt-Finjuego'>
           <h3>¡Juego terminado!</h3>
