@@ -1,24 +1,9 @@
-import { useEffect, useState } from 'react';
+import {useState } from 'react';
 
 import { Juego, PresentacionJuego, Botones } from '../components';
-import { useFetch } from '../hooks/useFetch';
+export const GamePage =  ({arrCuadro}) => {
 
-
-export const GamePage = ({estado=false}) => {
-
-  const urlApi = import.meta.env.VITE_API_URL;
-  
-  const [jugando, setJugando] = useState(estado);
-  const [arrCuadro, setArrCuadro] = useState(null)
-  const {data, error, isLoading, consulta } = useFetch()
-
-  useEffect(() => {
-    consulta(`${urlApi}/?type=Painting&limit=200&has_image=1`)
-  }, [])
-  useEffect(() => {
-    setArrCuadro(data.data)
-  }, [data])
-  
+  const [jugando, setJugando] = useState(false);
 
   return (
     <>
@@ -32,8 +17,7 @@ export const GamePage = ({estado=false}) => {
       </header>
 
     {
-      isLoading ? 
-           ("Cargando...")
+      !arrCuadro ? <p>cargando...</p> 
         :
           (
             !jugando ? 

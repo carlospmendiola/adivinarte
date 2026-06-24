@@ -23,6 +23,13 @@ header {
   @include mixins.centerFC;
   @include mixins.columnFC
 }
+.zona-paginacion {
+  padding: variables.$sp-sm 0 variables.$sp-xs;
+  gap: variables.$sp-md;
+  @include mixins.flex-Container;
+  @include mixins.centerFC;
+  border-top: 1px solid variables.$black-color-10;
+}
 
 footer {
   background-color: variables.$primary-color-shadow;
