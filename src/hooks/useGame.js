@@ -13,19 +13,6 @@ export const useGame = ({arrCuadro}) => {
     const [screenNumber, setScreenNumber] = useState(0)
     const [gameOver, setGameOver] = useState(false)
   
-  // const [game, setGame] = useState(
-  //   {
-  //     artwork:null,
-  //     option:[],
-  //     correctOption:null,
-  //     saveOption:null,
-  //     responsePoint:null,
-  //     score:0,
-  //     screenNumber:0,
-  //     gameOver:false
-  //   }
-  //  ) 
-  
     const handleClick = () => {
       if (screenNumber >= 10) {
         setGameOver(true);

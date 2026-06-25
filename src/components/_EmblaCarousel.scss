@@ -1,0 +1,72 @@
+@use '../styles/variables';
+@use '../styles/mixins';
+@use '../styles/style.scss';
+
+.embla__viewport {
+  overflow: hidden;
+}
+
+.embla__container {
+  display: flex;
+  touch-action: pan-y pinch-zoom;
+}
+
+.embla__slide {
+  flex: 0 0 100%;
+  min-width: 0;
+}
+.embla__dots {
+  @include mixins.flex-Container;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: center;
+  margin: -50px 10px 30px;
+  // margin-right: calc((2.6rem - 1.4rem) / 2 * -1);
+}
+.embla__dot {
+  -webkit-tap-highlight-color: variables.$black-color-90;
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: transparent;
+  touch-action: manipulation;
+  text-decoration: none;
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  width: 2.2rem;
+  height: 2.2rem;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  position: relative;
+  flex-flow: row nowrap;
+}
+
+.embla__dot {
+  opacity: .75;
+}
+
+.embla__dot--selected {
+  opacity: 1;
+}
+
+.embla__dot::before {
+  border: 1px solid variables.$white;
+  background-color: rgba(255, 255, 255, .6);
+}
+
+.embla__dot--selected::after {
+  opacity: 1;
+}
+
+.embla__dot::before,
+.embla__dot::after {
+  width: 1.5rem;
+  height: .25rem;
+  border-radius: 5%;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  content: '';
+}

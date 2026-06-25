@@ -39,6 +39,7 @@ export const Juego = ({arrCuadro}) => {
             {<p className='conteo'><span className='puntos'>{screenNumber}</span>/10</p>}
           </section>
 
+
           <section className='zona-botones'>
 
             {artwork && <button onClick={responsePoint === null ? 

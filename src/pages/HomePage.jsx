@@ -1,6 +1,6 @@
 import React from 'react'
-import { Carrousel } from '../components/Carrousel'
 import { useNavigate } from 'react-router'
+import { EmblaCarousel } from '../components/EmblaCarousel'
 
 export const HomePage = () => {
    let navigate = useNavigate()
@@ -19,7 +19,7 @@ export const HomePage = () => {
 
       <section className='container-Principal'>
         
-        <Carrousel/>
+        <EmblaCarousel/>
 
         <section className='zona-botones'>
           <button onClick={()=>{handleClick('juego')}} className='boton-juego'>¡Comienza el juego!</button>
