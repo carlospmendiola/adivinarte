@@ -21,7 +21,7 @@
     @include mixins.mayus;
   }
   p.puntuacion {
-    font-size: variables.$txt-resultado;
+    font-size: variables.$txt-title-sections;
     color: variables.$secondary-color;
     background-color: variables.$white;
     padding: variables.$sp-xs 0;
@@ -31,7 +31,7 @@
     }
   }
   p.mensaje-final {
-    font-size: variables.$txt-title-card;
+    font-size: variables.$txt-normal;
     margin-top: variables.$sp-sm;
     color: variables.$white;
     font-weight: variables.$fontweigth-light;

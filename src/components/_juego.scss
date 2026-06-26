@@ -26,9 +26,6 @@
     border-bottom: 1px solid variables.$black-color-10;
     margin-bottom: variables.$sp-sm;
     padding: variables.$sp-sm;
-    &:last-child {
-      border-bottom: none
-    }
   }
   .correcta {
       color: variables.$text-color;
