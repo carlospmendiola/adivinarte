@@ -3,7 +3,7 @@ import useEmblaCarousel from 'embla-carousel-react'
 import './_EmblaCarousel.scss'
 
 export function EmblaCarousel() {
-  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: false })
+  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true })
   const [scrollSnaps, setScrollSnaps] = useState([])
   const [selectedSnap, setSelectedSnap] = useState(0)
 
@@ -42,7 +42,8 @@ export function EmblaCarousel() {
             className="embla__dot"
             key={index}
             onClick={() => scrollTo(index)}
-          ></button>
+          >
+          </button>
         ))}
       </div>
     </div>

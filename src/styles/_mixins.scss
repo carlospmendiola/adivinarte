@@ -13,6 +13,9 @@
 @mixin centerFC {
   justify-content: center;
 }
+@mixin centerSB {
+  justify-content: space-between;
+}
 
 @mixin flexWrP {
   flex-wrap: wrap;

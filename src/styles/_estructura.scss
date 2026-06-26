@@ -1,6 +1,13 @@
 @use './variables';
 @use './mixins';
 
+main {
+  @include mixins.flex-Container;
+    @include mixins.centerSB;
+    @include mixins.columnFC;
+    height: 100vh;
+}
+
 header,
 .intro-juego {
   padding: variables.$sp-md variables.$sp-lg variables.$sp-xs;

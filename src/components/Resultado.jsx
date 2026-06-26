@@ -19,7 +19,7 @@ export const Resultado = ({score,handleReset}) => {
   return (
     <>
       <section className='container-Principal'>
-        <div><img src={nivel.imagen} alt=""/></div>
+        <div><img src={nivel.imagen} alt="{nivel.mensaje}"/></div>
         <section className='txt-Finjuego'>
           <h3>¡Juego terminado!</h3>
           <p className='puntuacion'><span className='destacado'>{score}</span> de <span className='destacado'>10</span> aciertos</p>

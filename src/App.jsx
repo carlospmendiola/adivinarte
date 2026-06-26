@@ -17,19 +17,20 @@ function App() {
     consulta(`${urlApi}/?type=Painting&limit=200&has_image=1`)
   }, [])
   return (
-    <>
+    <><main>
       <NavBar/>
-      <main>
+      
         <Routes>
           <Route path='/' element={<HomePage/>} />
           <Route path='/catalogo' element={<CataloguePage arrCuadro={data.data} />} />
           <Route path='/Juego'  element={<GamePage arrCuadro={data.data} />} />
         </Routes>      
-      </main>
+      
 
     <footer>
       <p>©Adivinarte 2026.</p>
     </footer>
+    </main>
     </>
   )
 }
