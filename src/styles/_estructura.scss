@@ -26,9 +26,11 @@ header,
 .zona-botones {
   padding: variables.$sp-lg variables.$sp-lg variables.$sp-xs;
   gap: variables.$sp-md;
+  margin-bottom: variables.$sp-lg;
   @include mixins.flex-Container;
   @include mixins.centerFC;
-  @include mixins.columnFC
+  @include mixins.columnFC;
+  
 }
 .zona-paginacion {
   padding: variables.$sp-sm 0 variables.$sp-xs;
