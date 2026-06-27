@@ -5,6 +5,8 @@ import { useLocation } from 'react-router'
 export const DetalleCardPage = ({arrCuadro}) => {
   const location = useLocation()
   console.log('location.state:', location.state)
+
+  if (!location.state) return <p>No hay obra seleccionada</p>
   const cuadro = location.state.cuadro
 
 
