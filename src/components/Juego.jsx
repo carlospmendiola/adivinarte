@@ -41,7 +41,6 @@ export const Juego = ({arrCuadro}) => {
 
 
           <section className='zona-botones'>
-
             {artwork && <button onClick={responsePoint === null ? 
               (handleCheck):
               (handleClick)
@@ -52,7 +51,6 @@ export const Juego = ({arrCuadro}) => {
                 (<span className='boton-juego'>Responder</span>):
                 (<span className='boton-catalogo'>Seguir jugando</span>)
                 }
-
                 </button>}
           </section>
       </section>

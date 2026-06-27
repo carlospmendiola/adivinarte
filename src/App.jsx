@@ -5,6 +5,7 @@ import { NavBar, Botones } from './components'
 import { Route, Routes } from 'react-router'
 import { CataloguePage, GamePage, HomePage } from './pages'
 import { useFetch } from './hooks/useFetch'
+import { DetalleCardPage } from './pages/DetalleCardPage'
 
 
 function App() {
@@ -14,22 +15,21 @@ function App() {
   const { data, consulta } = useFetch()
 
   useEffect(() => {
-    consulta(`${urlApi}/?type=Painting&limit=200&has_image=1`)
+    consulta(`${urlApi}/?type=Painting&limit=250&has_image=1`)
   }, [])
   return (
-    <><main>
+    <>
+    <main>
       <NavBar/>
-      
-        <Routes>
-          <Route path='/' element={<HomePage/>} />
-          <Route path='/catalogo' element={<CataloguePage arrCuadro={data.data} />} />
-          <Route path='/Juego'  element={<GamePage arrCuadro={data.data} />} />
+      <Routes>
+        <Route path='/' element={<HomePage/>} />
+        <Route path='/catalogo' element={<CataloguePage arrCuadro={data.data} />} />
+        <Route path='/Juego'  element={<GamePage arrCuadro={data.data} />} />
+        <Route path='/DetalleCardPage'  element={<DetalleCardPage arrCuadro={data.data} />} />
         </Routes>      
-      
-
-    <footer>
-      <p>©Adivinarte 2026.</p>
-    </footer>
+      <footer>
+        <p>©Adivinarte 2026.</p>
+      </footer>
     </main>
     </>
   )

@@ -8,7 +8,8 @@
 }
 
 
-.card {
+.card,
+.detalleCard {
   break-inside: avoid;
   /* evita que una card se parta entre columnas */
   margin-bottom: variables.$sp-sm;
@@ -23,17 +24,33 @@
   }
   h3 
     {
-    font: variables.$fontweigth-bold variables.$txt-normal variables.$secondary-font;
+    font: variables.$fontweigth-bold variables.$txt-title-card variables.$secondary-font;
     @include mixins.mayus;
     color: variables.$secondary-color;
-    line-height: variables.$lh-normal;
+    line-height: variables.$lh-titulo;
+    margin-bottom: variables.$sp-xs;
   }
   p
     {
     font: variables.$fontweigth-regular variables.$txt-title-card variables.$secondary-font;
-    @include mixins.italica
+    @include mixins.italica;
+    margin-bottom: variables.$sp-sm;
+  }
+  p.descripcion {
+    font-family: variables.$text-font;
+    font-style: normal;
+    font-size: variables.$txt-normal;
   }
 }
+.detalleCard {
+  h3 {
+    font-size: variables.$txt-title-sections;
+    
+    }
+  p {
+    font-size: variables.$txt-title-sections;
+  }
+} 
 
 /*====================================
     Responsive768

@@ -3,8 +3,8 @@
 
 main {
   @include mixins.flex-Container;
-    @include mixins.centerSB;
-    @include mixins.columnFC;
+  @include mixins.topPosition;
+  @include mixins.columnFC;
     height: 100vh;
 }
 
@@ -36,13 +36,14 @@ header,
   @include mixins.flex-Container;
   @include mixins.centerFC;
   border-top: 1px solid variables.$black-color-10;
+  margin-bottom: variables.$sp-xxl;
 }
 
 footer {
   background-color: variables.$primary-color-shadow;
   padding: variables.$sp-md 0 variables.$sp-xs 0;
   @include mixins.txt-center;
-  margin-top: variables.$sp-xxl;
+  margin-top: auto;
 }
 
 
