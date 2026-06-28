@@ -102,8 +102,13 @@ footer {
 Responsive 1200
 ============================================== */
 @media screen and (min-width:1200px) {
+
+  .container-Principal,
+  .container-pregunta,
   .detalleCard {
       width: variables.$ws-md;
     }
 
 }
+/*cierra 1200*/
+
