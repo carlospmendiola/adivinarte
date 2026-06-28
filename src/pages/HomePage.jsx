@@ -22,7 +22,7 @@ export const HomePage = () => {
         <EmblaCarousel/>
 
         <section className='zona-botones'>
-          <button onClick={()=>{handleClick('juego')}} className='boton-juego'>¡Comienza el juego!</button>
+          <button onClick={()=>{navigate('/juego', { state: { empezar: true } })}} className='boton-juego'>¡Comienza el juego!</button>
           <button onClick={()=>{handleClick('catalogo')}} className='boton-catalogo'>Visita el catálogo</button>
         </section>
 

@@ -6,8 +6,8 @@ Juego web de historia del arte desarrollado como proyecto personal del **Bootcam
 
 ## Urls
 
-🔗 Despliegue en Render: [adivinarte.onrender.com](https://adivinarte.onrender.com)  
-📁 Repositorio Github: [github.com/carlospmendiola/adivinarte](https://github.com/carlospmendiola/adivinarte)
+- Despliegue en Render: [adivinarte.onrender.com](https://adivinarte.onrender.com)  
+- Repositorio Github: [github.com/carlospmendiola/adivinarte](https://github.com/carlospmendiola/adivinarte)
 
 ---
 
@@ -24,13 +24,13 @@ Juego web de historia del arte desarrollado como proyecto personal del **Bootcam
 
 ## Funcionalidades
 
-- 🎮 Juego de 10 preguntas con obras aleatorias
-- ❓ Pregunta aleatoria sobre título o autor de la obra
-- ✅ Feedback visual inmediato: opción correcta en verde, incorrecta en rojo
-- 🏆 Puntuación en tiempo real y pantalla de resultado con perfil del jugador según puntuación
-- 📚 Catálogo paginado de obras (12 por página) con página de detalle de cada obra
-- 🖼️ Carrusel de obras en la página de inicio
-- 📱 Diseño responsive (mobile first)
+- Juego de 10 preguntas con obras aleatorias
+- Pregunta aleatoria sobre título o autor de la obra
+- Feedback visual inmediato: opción correcta en verde, incorrecta en rojo
+- Puntuación en tiempo real y pantalla de resultado con perfil del jugador según puntuación
+- Catálogo paginado de obras (12 por página) con página de detalle de cada obra
+- Carrusel de obras en la página de inicio
+- Diseño responsive (mobile first)
 
 ---
 
@@ -38,7 +38,6 @@ Juego web de historia del arte desarrollado como proyecto personal del **Bootcam
 
 ### Requisitos
 
-- Node.js
 - Yarn
 
 ### Instalación

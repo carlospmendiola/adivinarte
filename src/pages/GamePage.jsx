@@ -1,9 +1,12 @@
 import {useState } from 'react';
 
 import { Juego, PresentacionJuego, Botones } from '../components';
+import { useLocation } from 'react-router';
 export const GamePage =  ({arrCuadro}) => {
 
-  const [jugando, setJugando] = useState(false);
+  const location = useLocation()
+  const [jugando, setJugando] = useState(location.state?.empezar || false)
+  
   const presentacionYJuego =()=> {
     if (!arrCuadro) {
       return <p>cargando...</p>

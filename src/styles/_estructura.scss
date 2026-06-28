@@ -54,7 +54,8 @@ footer {
 ============================================== */
 @media screen and (min-width:768px) {
   .container-Principal,
-  .container-pregunta {
+  .container-pregunta,
+  .detalleCard {
     width: variables.$ws-xl;
     @include mixins.center-M0auto;
   }
@@ -88,9 +89,11 @@ footer {
       padding: variables.$sp-xl variables.$sp-xxl variables.$sp-xs;
     }
   .container-Principal,
-  .container-pregunta {
+  .container-pregunta,
+  .detalleCard {
     width: variables.$ws-lg;
   }
+
 
 }
 /*cierra 990*/
@@ -99,6 +102,8 @@ footer {
 Responsive 1200
 ============================================== */
 @media screen and (min-width:1200px) {
-
+  .detalleCard {
+      width: variables.$ws-md;
+    }
 
 }
