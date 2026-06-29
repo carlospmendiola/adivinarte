@@ -27,12 +27,12 @@ export function EmblaCarousel() {
     <div className="embla">
       <div className="embla__viewport" ref={emblaRef}>
         <div className="embla__container">
-          <div className="embla__slide"><img src="https://carlospmendiola.com/downloads/Bootcamp-Slider/home-Slider-1.jpg" alt="The Race Track (Death on a Pale Horse)"/></div>
-          <div className="embla__slide"><img src="https://carlospmendiola.com/downloads/Bootcamp-Slider/home-Slider-3.jpg" alt="La Cervara, the Roman Campagna"/></div>
-          <div className="embla__slide"><img src="https://carlospmendiola.com/downloads/Bootcamp-Slider/home-Slider-2.jpg" alt="The Race Track (Death on a Pale Horse)"/></div>
-          <div className="embla__slide"><img src="https://carlospmendiola.com/downloads/Bootcamp-Slider/home-Slider-4.jpg" alt="The Race Track (Death on a Pale Horse)"/></div>
-          <div className="embla__slide"><img src="https://carlospmendiola.com/downloads/Bootcamp-Slider/home-Slider-5.jpg" alt="The Race Track (Death on a Pale Horse)"/></div>
-          <div className="embla__slide"><img src="https://carlospmendiola.com/downloads/Bootcamp-Slider/home-Slider-6.jpg" alt="The Race Track (Death on a Pale Horse)"/></div>
+          <div className="embla__slide"><img src="https://carlospmendiola.com/downloads/Bootcamp-Slider/home-Slider-1.jpg" alt=""/></div>
+          <div className="embla__slide"><img src="https://carlospmendiola.com/downloads/Bootcamp-Slider/home-Slider-3.jpg" alt=""/></div>
+          <div className="embla__slide"><img src="https://carlospmendiola.com/downloads/Bootcamp-Slider/home-Slider-2.jpg" alt=""/></div>
+          <div className="embla__slide"><img src="https://carlospmendiola.com/downloads/Bootcamp-Slider/home-Slider-4.jpg" alt=""/></div>
+          <div className="embla__slide"><img src="https://carlospmendiola.com/downloads/Bootcamp-Slider/home-Slider-5.jpg" alt=""/></div>
+          <div className="embla__slide"><img src="https://carlospmendiola.com/downloads/Bootcamp-Slider/home-Slider-6.jpg" alt=""/></div>
         </div>
       </div>
 
