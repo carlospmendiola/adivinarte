@@ -1,3 +1,4 @@
+
 # AdivinARTE
 
 Juego web de historia del arte desarrollado como proyecto personal del **Bootcamp Full Stack Developer (abril 2026)**. El jugador visualiza una obra de arte del Cleveland Museum of Art y debe adivinar su título o su autor entre 4 opciones. El jugador debe responder a 10 preguntas sobre obras diferentes y va acumulando sus puntos. Al final sale la puntuación que ha logrado y qué tipo de jugador es según los puntos logrados.
